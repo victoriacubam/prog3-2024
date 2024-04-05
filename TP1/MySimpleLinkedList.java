@@ -1,6 +1,8 @@
 package TP1;
 
-public class MySimpleLinkedList<T> {
+import java.util.Iterator;
+
+public class MySimpleLinkedList<T> implements Iterable<T> {
     private Node<T> first;
 
     public MySimpleLinkedList() {
@@ -83,5 +85,11 @@ public class MySimpleLinkedList<T> {
             }
         }
         return "[" + info + "]";
+    }
+
+    //Ejercicio 4
+    @Override
+    public Iterator<T> iterator() {
+        return new MyIterator<T>(this.first);
     }
 }
