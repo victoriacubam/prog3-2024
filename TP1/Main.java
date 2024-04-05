@@ -22,6 +22,6 @@ public class Main {
     System.out.println("Tamaño: " + lista.size());
     System.out.println("Posicion de "+ n1 + ": " + lista.indexOf(n1));
     System.out.println("Nodo en posicion 2: " + lista.get(2));
-    //System.out.println(lista.toString());
+    System.out.println(lista);
     }
 }

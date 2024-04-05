@@ -73,15 +73,15 @@ public class MySimpleLinkedList<T> {
     @Override
     public String toString() {
         String info = "";
-        if(!this.isEmpty()){
-            info = (String)this.first.getInfo();
+        if (!this.isEmpty()) {
             Node<T> tmp = this.first;
+            info += tmp.getInfo();
 
-            while ((tmp!=null)&&(tmp.getNext()!=null)){
-                info+= tmp.getInfo() + "-";
+            while (tmp.getNext() != null) {
                 tmp = tmp.getNext();
+                info += "--->" + tmp.getInfo();
             }
         }
-        return "[" + info +"]";
+        return "[" + info + "]";
     }
 }

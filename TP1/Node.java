@@ -32,7 +32,7 @@ public class Node<T> {
     }
 
     public String toString() {
-        return this.getInfo().toString();
+        return "[" + this.getInfo().toString() + "]";
     }
 
     public boolean equals(Node<T> n) {
