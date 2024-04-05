@@ -1,27 +1,27 @@
 package TP1;
 
 import java.sql.SQLOutput;
+import java.util.Iterator;
 
 public class Main {
     public static void main (String[]args){
-    MySimpleLinkedList<Node<String>> lista = new MySimpleLinkedList<>();
+        MySimpleLinkedList<Integer> lista = new MySimpleLinkedList<>();
 
-    Node<String> n1 = new Node<String>();
-    Node<String> n2 = new Node<String>();
-    Node<String> n3 = new Node<String>();
+        lista.insertFront(1);// 1
+        lista.insertFront(2);// 2,1
+        lista.insertFront(3);// 3,2,1
 
-    n1.setInfo("1");
-    n2.setInfo("2");
-    n3.setInfo("3");
+        System.out.println("Esta vacia: " + lista.isEmpty());
+        System.out.println("Tamaño: " + lista.size());
+        System.out.println("Posicion de "+ 1 + ": " + lista.indexOf(1));
+        System.out.println("Nodo en posicion 2: " + lista.get(2));
+        System.out.println("Lista: " + lista);
 
-    lista.insertFront(n1);// 1
-    lista.insertFront(n2);// 2,1
-    lista.insertFront(n3);// 3,2,1
+        Iterator<Integer> it = lista.iterator();
 
-    System.out.println("Esta vacia: " + lista.isEmpty());
-    System.out.println("Tamaño: " + lista.size());
-    System.out.println("Posicion de "+ n1 + ": " + lista.indexOf(n1));
-    System.out.println("Nodo en posicion 2: " + lista.get(2));
-    System.out.println(lista);
+        while (it.hasNext()){
+            Integer i = it.next();
+            System.out.println(i);
+        }
     }
 }

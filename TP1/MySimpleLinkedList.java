@@ -61,11 +61,9 @@ public class MySimpleLinkedList<T> implements Iterable<T> {
             //T info = tmp.getInfo();
             while ((tmp!=null)&&(tmp.getInfo()!=n)){
                 tmp = tmp.getNext();
-                System.out.println(i);
                 i++;
             }
             if((tmp!=null)&&(tmp.getInfo()==n)) {
-                System.out.println("hola");
                 return i;
             }
         }
