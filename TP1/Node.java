@@ -31,4 +31,11 @@ public class Node<T> {
         this.info = info;
     }
 
+    public String toString() {
+        return this.getInfo().toString();
+    }
+
+    public boolean equals(Node<T> n) {
+        return this.getInfo().equals(n.getInfo());
+    }
 }

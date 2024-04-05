@@ -14,28 +14,74 @@ public class MySimpleLinkedList<T> {
     }
 
     public T extractFront() {
-        // TODO
-        return null;
+        T info = this.first.getInfo();
+        this.first = this.first.getNext();
+        return info;
     }
 
     public boolean isEmpty() {
-        // TODO
-        return false;
+        return this.first == null;
     }
 
     public T get(int index) {
-        // TODO
+        if(index<=this.size()){
+            int i = 0;
+            Node<T> aux = this.first;
+            while ((i<index)&&(aux.getNext()!=null)){
+                aux = aux.getNext();
+                i++;
+            }
+            if(i==index){
+                return aux.getInfo();
+            }
+        }
         return null;
     }
 
     public int size() {
-        // TODO
+        if(!this.isEmpty()){
+            int size = 1;
+            Node<T> aux = this.first;
+            while ((aux!=null)&&(aux.getNext()!=null)){
+                size++;
+                aux = aux.getNext();
+            }
+            return size;
+        }
         return 0;
+    }
+
+    //Ejercicio 3
+    public int indexOf(T n){
+        if(!this.isEmpty()){
+            int i = 0;
+            Node<T> tmp = this.first;
+            //T info = tmp.getInfo();
+            while ((tmp!=null)&&(tmp.getInfo()!=n)){
+                tmp = tmp.getNext();
+                System.out.println(i);
+                i++;
+            }
+            if((tmp!=null)&&(tmp.getInfo()==n)) {
+                System.out.println("hola");
+                return i;
+            }
+        }
+        return -1;
     }
 
     @Override
     public String toString() {
-        // TODO
-        return "";
+        String info = "";
+        if(!this.isEmpty()){
+            info = (String)this.first.getInfo();
+            Node<T> tmp = this.first;
+
+            while ((tmp!=null)&&(tmp.getNext()!=null)){
+                info+= tmp.getInfo() + "-";
+                tmp = tmp.getNext();
+            }
+        }
+        return "[" + info +"]";
     }
 }
