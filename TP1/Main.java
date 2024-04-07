@@ -11,17 +11,27 @@ public class Main {
         lista.insertFront(2);// 2,1
         lista.insertFront(3);// 3,2,1
 
-        System.out.println("Esta vacia: " + lista.isEmpty());
-        System.out.println("Tamaño: " + lista.size());
-        System.out.println("Posicion de "+ 1 + ": " + lista.indexOf(1));
-        System.out.println("Nodo en posicion 2: " + lista.get(2));
-        System.out.println("Lista: " + lista);
+//        System.out.println("Esta vacia: " + lista.isEmpty());
+//        System.out.println("Tamaño: " + lista.size());
+//        System.out.println("Posicion de "+ 1 + ": " + lista.indexOf(1));
+//        System.out.println("Nodo en posicion 2: " + lista.get(2));
+//        System.out.println("Lista: " + lista);
+//
+//        Iterator<Integer> it = lista.iterator();
+//
+//        while (it.hasNext()){
+//            Integer i = it.next();
+//            System.out.println(i);
+//        }
 
-        Iterator<Integer> it = lista.iterator();
+        MySimpleLinkedList<Integer> listaB = new MySimpleLinkedList<>();
+        listaB.insertFront(5);
+        listaB.insertFront(2);
+        listaB.insertFront(1);
 
-        while (it.hasNext()){
-            Integer i = it.next();
-            System.out.println(i);
-        }
+        System.out.println(lista);
+        System.out.println(listaB);
+        //System.out.println(lista.diferenciarLista(listaB));
+        System.out.println(lista.getElementosComunes(listaB));
     }
 }
