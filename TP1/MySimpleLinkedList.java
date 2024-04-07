@@ -9,7 +9,13 @@ public class MySimpleLinkedList<T extends Comparable <T>> implements Iterable<T>
         this.first = null;
     }
 
-    //EJERCICIO 1
+    /*
+    EJERCICIO 1: Implemente los métodos indicados del esqueleto de Lista desarrollado en Teoría (
+    void insertFront(T), T extractFront(), boolean isEmpty(), int size(),
+    String toString). Agregar también el método: T get(index).
+    */
+
+
 
     //Insertar al principio de la lista
     //Complejidad computacional: O(1) --- Solo setea el primer nodo de la lista y le encadena como siguiente el anterior primer nodo
@@ -64,7 +70,12 @@ public class MySimpleLinkedList<T extends Comparable <T>> implements Iterable<T>
         return 0;
     }
 
-    //Ejercicio 3
+    /*
+    EJERCICIO 3: A la implementación de la clase Lista realizada en el ejercicio 1, agregue un método
+    int indexOf(T), que reciba un elemento y retorne el índice donde está almacenado ese
+    elemento, o -1 si el elemento no existe en la lista.
+    */
+
     public int indexOf(T n){
         if(!this.isEmpty()){
             int i = 0;
@@ -96,13 +107,20 @@ public class MySimpleLinkedList<T extends Comparable <T>> implements Iterable<T>
         return "[" + info + "]";
     }
 
-    //Ejercicio 4
+    /*
+    EJERCICIO 4: A partir de la clase Lista implementada en el ejercicio 1, implemente el patrón
+    iterator-iterable, para que la lista sea iterable.
+    */
     @Override
     public Iterator<T> iterator() {
         return new MyIterator<>(this.first);
     }
 
-    //Ejercicio 5
+    /*
+    EJERCICIO 5: Escriba un procedimiento que dadas dos listas construya otra con los elementos comunes,
+    suponiendo que: a) Las listas están desordenadas y la lista resultante debe quedar ordenada. b)
+    Las listas están ordenadas y la lista resultante debe mantenerse ordenada.
+    */
 
     public MySimpleLinkedList<T> getElementosComunes (MySimpleLinkedList<T> listaB){
         MySimpleLinkedList<T> resultado = new MySimpleLinkedList<>();
@@ -138,7 +156,10 @@ public class MySimpleLinkedList<T extends Comparable <T>> implements Iterable<T>
         }
     }
 
-    //Ejercicio 6
+    /*
+    EJERCICIO 6: Escriba una función que dadas dos listas construya otra con los elementos que están en la
+    primera pero no en la segunda.
+     */
 
     public MySimpleLinkedList<T> diferenciarLista (MySimpleLinkedList<T> listaB) {
         MySimpleLinkedList<T> resultado = new MySimpleLinkedList<>();
