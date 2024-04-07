@@ -3,6 +3,8 @@ package TP1;
 public class Node<T> {
     private T info;
     private Node<T> next;
+    //Si se quisiera hacer doblemente vinculada habria que agregar un atributo PREV
+    // que guarde un puntero hacia el nodo anterior
 
     public Node() {
         this.info = null;
