@@ -2,11 +2,13 @@ package TP1;
 
 import java.util.Iterator;
 
-public class MySimpleLinkedList<T extends Comparable <T>> implements Iterable<T> {
+public class MySimpleLinkedList<T extends Comparable <T>> {
     private Node<T> first;
+    private Node<T> last;
 
     public MySimpleLinkedList() {
         this.first = null;
+        this.last = null;
     }
 
     /*
@@ -113,10 +115,11 @@ public class MySimpleLinkedList<T extends Comparable <T>> implements Iterable<T>
     iterator-iterable, para que la lista sea iterable.
     ¿Existe alguna ventaja computacional a la hora
     de recorrer la lista de principio a fin si se cuenta con un iterador?
-    ---La ventaja será que existirá un cursor que recuerda la posición, por lo que la lista no se debe recorrer desde el principio en cada llamado
+    ---La ventaja será que existirá un cursor que recuerda la posición, por lo que la lista no se debe
+    recorrer desde el principio en cada llamado
     */
-    @Override
-    public Iterator<T> iterator() {
+
+    public MyIterator<T> MyIterador() {
         return new MyIterator<>(this.first);
     }
 
@@ -126,7 +129,25 @@ public class MySimpleLinkedList<T extends Comparable <T>> implements Iterable<T>
     Las listas están ordenadas y la lista resultante debe mantenerse ordenada.
     */
 
-    public MySimpleLinkedList<T> getElementosComunes (MySimpleLinkedList<T> listaB){
+    //a) Las listas están desordenadas y la lista resultante debe quedar ordenada
+    public MySimpleLinkedList<T> getElementosComunesListasDesordenadas(MySimpleLinkedList<T> listaB){
+        MySimpleLinkedList<T> resultado = new MySimpleLinkedList<>();
+        for (Node<T> a = this.first; a.getNext()!= null; a = a.getNext()){
+            Node<T> b = listaB.first;
+            boolean found = false;
+            while (b!= null && !found){
+                if (a.getInfo().equals(b.getInfo())){
+                    resultado.insertOrdenado(a.getInfo());
+                    found = true;
+                } else {
+                    b = b.getNext();
+                }
+            }
+        }
+
+        return resultado;
+
+        /*//Sin iterador
         MySimpleLinkedList<T> resultado = new MySimpleLinkedList<>();
 
         for (Node<T> nodoA = this.first; nodoA!= null; nodoA=nodoA.getNext()){
@@ -140,10 +161,87 @@ public class MySimpleLinkedList<T extends Comparable <T>> implements Iterable<T>
                 //resultado.insertFront(nodoB.getInfo());
             }
         }
-        return resultado;
+        return resultado;*/
     }
 
-    //REVISAR ESTE METODO
+    private void insertOrdenado(T info){
+        Node<T> aux = this.first;
+        //Si esta vacio o lo tiene que insertar al principio porque es menor que el primero
+        if (this.isEmpty() || (aux.getInfo().compareTo(info)>0)){
+            this.insertFront(info);
+        } else {
+            while (aux.getNext()!=null && (aux.getInfo().compareTo(info)<0)){
+                aux = aux.getNext();
+            }
+            //Lo tiene que insertar al final porque llegó al final de la lista
+            if (aux.getNext()==null){
+                aux.setNext(new Node<>(info, null));
+            }
+            //Lo tiene que insertar entremedio
+            else {
+                Node<T> next = aux.getNext();
+                aux = new Node<>(info, next);
+            }
+        }
+    }
+
+    //b) Las listas están ordenadas y la lista resultante debe mantenerse ordenada.
+    public MySimpleLinkedList<T> getElementosComunesListasOrdenadas(MySimpleLinkedList<T> listaB){
+        MySimpleLinkedList<T> resultado = new MySimpleLinkedList<>();
+        MyIterator<T> itListaA = this.MyIterador();
+        MyIterator<T> itListaB = listaB.MyIterador();
+        while (itListaA.hasNext() && (itListaB.hasNext())){
+            if (itListaA.value().compareTo(itListaB.value())>0){
+                itListaB.next();
+            }
+            else if (itListaA.value().compareTo(itListaB.value())<0) {
+                itListaA.next();
+            }
+            else {
+                resultado.insertLast(itListaA.value());
+                itListaA.next();
+                itListaB.next();
+            }
+        }
+
+        return resultado;
+
+        /*//Sin iterador
+        MySimpleLinkedList<T> resultado = new MySimpleLinkedList<>();
+        Node<T> nodoA = this.first;
+        Node<T> nodoB = listaB.first;
+        while ((!nodoA.getInfo().equals(nodoB.getInfo()))&&(nodoA.getNext()!=null)){
+            boolean found = false;
+            //Mientras que nodoA sea MENOR a nodoB va a seguir buscando en la lista B
+            while ((nodoA.getInfo().compareTo(nodoB.getInfo())<0)&&(nodoB.getNext()!=null)&&!found){
+                if(!nodoA.getInfo().equals(nodoB.getInfo())){
+                    nodoB = nodoB.getNext();
+                } else {
+                    //resultado.insertOrdenado(nodoA);
+                    resultado.insertFront(nodoB.getInfo());
+                    found = true;
+                    nodoB = nodoB.getNext();
+                }
+            }
+            nodoA = nodoA.getNext();
+        }
+        return resultado;*/
+    }
+    private void insertLast(T info) {
+        if(this.isEmpty()){
+            this.first = new Node<>(info, null);
+            this.last = this.first;
+        } else {
+            Node<T> aux = new Node<>(info, null);
+            this.last.setNext(aux);
+            this.last = aux;
+        }
+    }
+
+
+
+
+    /*//REVISAR ESTE METODO
     private void insertOrdenado(Node<T> aux) {
         if (this.isEmpty()){
             this.insertFront(aux.getInfo());
@@ -158,7 +256,7 @@ public class MySimpleLinkedList<T extends Comparable <T>> implements Iterable<T>
             tmp.setNext(aux);
             //tmp.getNext().setNext(next);
         }
-    }
+    }*/
 
     /*
     EJERCICIO 6: Escriba una función que dadas dos listas construya otra con los elementos que están en la

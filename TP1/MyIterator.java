@@ -19,4 +19,8 @@ public class MyIterator<T> implements Iterator<T> { //Siempre parametrizada igua
         this.cursor = this.cursor.getNext();
         return info;
     }
+
+    public T value(){
+        return cursor.getInfo();
+    }
 }
