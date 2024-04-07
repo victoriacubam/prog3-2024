@@ -9,8 +9,12 @@ public class MySimpleLinkedList<T extends Comparable <T>> implements Iterable<T>
         this.first = null;
     }
 
+    //EJERCICIO 1
+
+    //Insertar al principio de la lista
+    //Complejidad computacional: O(1) --- Solo setea el primer nodo de la lista y le encadena como siguiente el anterior primer nodo
     public void insertFront(T info) {
-        Node<T> tmp = new Node<T>(info,null);
+        Node<T> tmp = new Node<>(info,null);
         tmp.setNext(this.first);
         this.first = tmp;
     }
@@ -88,13 +92,13 @@ public class MySimpleLinkedList<T extends Comparable <T>> implements Iterable<T>
     //Ejercicio 4
     @Override
     public Iterator<T> iterator() {
-        return new MyIterator<T>(this.first);
+        return new MyIterator<>(this.first);
     }
 
     //Ejercicio 5
 
     public MySimpleLinkedList<T> getElementosComunes (MySimpleLinkedList<T> listaB){
-        MySimpleLinkedList<T> resultado = new MySimpleLinkedList<T>();
+        MySimpleLinkedList<T> resultado = new MySimpleLinkedList<>();
 
         for (Node<T> nodoA = this.first; nodoA!= null; nodoA=nodoA.getNext()){
             Node<T> nodoB = listaB.first;
@@ -130,7 +134,7 @@ public class MySimpleLinkedList<T extends Comparable <T>> implements Iterable<T>
     //Ejercicio 6
 
     public MySimpleLinkedList<T> diferenciarLista (MySimpleLinkedList<T> listaB) {
-        MySimpleLinkedList<T> resultado = new MySimpleLinkedList<T>();
+        MySimpleLinkedList<T> resultado = new MySimpleLinkedList<>();
 
         for (Node<T> n = this.first; n.getNext()!= null; n=n.getNext()){
             Node<T> aux = listaB.first;
