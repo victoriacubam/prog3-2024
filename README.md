@@ -5,7 +5,7 @@
 * [Trabajo práctico N° 2 - Recursión y ordenamiento](#TP2)
 
 
-## Trabajo práctico N° 1 - Estructuras de datos (#TP1)
+## [Trabajo práctico N° 1 - Estructuras de datos](#TP1)
 - `Ejercicio 1`
 Implemente los métodos indicados del esqueleto de Lista desarrollado en Teoría (void insertFront(T), T extractFront(), boolean isEmpty(), int size(),String toString). Agregar también el método: T get(index).
 - `Ejercicio 2`
