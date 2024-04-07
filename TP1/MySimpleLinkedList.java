@@ -16,7 +16,6 @@ public class MySimpleLinkedList<T extends Comparable <T>> implements Iterable<T>
     */
 
 
-
     //Insertar al principio de la lista
     //Complejidad computacional: O(1) --- Solo setea el primer nodo de la lista y le encadena como siguiente el anterior primer nodo
     public void insertFront(T info) {
@@ -112,6 +111,9 @@ public class MySimpleLinkedList<T extends Comparable <T>> implements Iterable<T>
     /*
     EJERCICIO 4: A partir de la clase Lista implementada en el ejercicio 1, implemente el patrón
     iterator-iterable, para que la lista sea iterable.
+    ¿Existe alguna ventaja computacional a la hora
+    de recorrer la lista de principio a fin si se cuenta con un iterador?
+    ---La ventaja será que existirá un cursor que recuerda la posición, por lo que la lista no se debe recorrer desde el principio en cada llamado
     */
     @Override
     public Iterator<T> iterator() {
