@@ -1,8 +1,8 @@
 <em>Trabajos Prácticos Programacion III 2024 </em>
 
 # TPs
-*[Trabajo práctico N° 1 - Estructuras de datos] (#TP1)
-*[Trabajo práctico N° 2 - Recursión y ordenamiento] (#TP2)
+* [Trabajo práctico N° 1 - Estructuras de datos] (#TP1)
+* [Trabajo práctico N° 2 - Recursión y ordenamiento] (#TP2)
 
 
 ## Trabajo práctico N° 1 - Estructuras de datos (#TP1)
