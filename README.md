@@ -1,16 +1,19 @@
 <em>Trabajos Prácticos Programacion III 2024 </em>
+
+# TPs
 *[Trabajo práctico N° 1 - Estructuras de datos]
 *[Trabajo práctico N° 2 - Recursión y ordenamiento]
+
 
 ## Trabajo práctico N° 1 - Estructuras de datos
 - `Ejercicio 1`
 Implemente los métodos indicados del esqueleto de Lista desarrollado en Teoría (void insertFront(T), T extractFront(), boolean isEmpty(), int size(),String toString). Agregar también el método: T get(index).
 - `Ejercicio 2`
 Considerando la implementación de la lista vinculada realizada en el ejercicio anterior, comparar lacomplejidad computacional contra un array en las siguientes operaciones:
-1. Insertar al principio.
-2. Buscar un elemento en una posición.
-3. Determinar la cantidad de elementos.
-4. Borrar un elemento de una posición determinada.
+###1. Insertar al principio.
+###2. Buscar un elemento en una posición.
+###3. Determinar la cantidad de elementos.
+###4. Borrar un elemento de una posición determinada.
 - `Ejercicio 3`
 A la implementación de la clase Lista realizada en el ejercicio 1, agregue un métodoint indexOf(T), que reciba un elemento y retorne el índice donde está almacenado eseelemento, o -1 si el elemento no existe en la lista.
 - `Ejercicio 4`
