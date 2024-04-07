@@ -19,6 +19,8 @@ public class MySimpleLinkedList<T extends Comparable <T>> implements Iterable<T>
         this.first = tmp;
     }
 
+    //Comportamiento de pila, saca el primero de la lista y lo retorna
+    //Complejidad computacional: O(1) --- Guarda la informacion del noto que va a extraer y lo quita de la lista
     public T extractFront() {
         T info = this.first.getInfo();
         this.first = this.first.getNext();
