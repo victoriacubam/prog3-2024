@@ -49,6 +49,8 @@ public class MySimpleLinkedList<T extends Comparable <T>> implements Iterable<T>
         return null;
     }
 
+    //Retorna el tamaño de la lista, una alternativa es guardar el tamaño como un atributo de la clase
+    //Complejidad computacional: O(n) --- Si esta vacia retornará 0, pero en el peor de los casos debe recorrerla entera (n es el tamaño de la lista)
     public int size() {
         if(!this.isEmpty()){
             int size = 1;
