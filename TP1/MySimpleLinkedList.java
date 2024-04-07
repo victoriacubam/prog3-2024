@@ -32,6 +32,8 @@ public class MySimpleLinkedList<T extends Comparable <T>> implements Iterable<T>
         return this.first == null;
     }
 
+    //Retorna el valor de un nodo dada su posicion dentro de la lista, en caso de no encontrarlo retorna null
+    //Complejidad computacional: O(n) --- En el peor de los casos, debe recorrer la lista entera (n es es el tamaño de la lista)
     public T get(int index) {
         if(index<=this.size()){
             int i = 0;
