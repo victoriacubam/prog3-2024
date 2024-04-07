@@ -27,6 +27,7 @@ public class MySimpleLinkedList<T extends Comparable <T>> implements Iterable<T>
         return info;
     }
 
+    //Complejidad computacional: O(1)
     public boolean isEmpty() {
         return this.first == null;
     }
