@@ -1,6 +1,6 @@
 <em> Trabajos Prácticos Programacion III 2024 </em>
 
-## [Trabajo práctico N° 1 - Estructuras de datos](#TP1)
+## Trabajo práctico N° 1 - Estructuras de datos
 `Ejercicio 1`
 
 Implemente los métodos indicados del esqueleto de Lista desarrollado en Teoría (void insertFront(T), T extractFront(), boolean isEmpty(), int size(), String toString). Agregar también el método: T get(index).
@@ -8,10 +8,10 @@ Implemente los métodos indicados del esqueleto de Lista desarrollado en Teoría
 `Ejercicio 2`
 
 Considerando la implementación de la lista vinculada realizada en el ejercicio anterior, comparar la complejidad computacional contra un array en las siguientes operaciones:
-### 1. Insertar al principio.
-### 2. Buscar un elemento en una posición.
-### 3. Determinar la cantidad de elementos.
-### 4. Borrar un elemento de una posición determinada.
+1. Insertar al principio.
+2. Buscar un elemento en una posición.
+3. Determinar la cantidad de elementos.
+4. Borrar un elemento de una posición determinada.
 
 `Ejercicio 3`
 
@@ -39,7 +39,7 @@ Considerando la implementación de Lista del ejercicio 1, realice una Lista dobl
 
 ***
 
-## [Trabajo práctico N° 2 -  Recursión y ordenamiento](#TP2)
+## Trabajo práctico N° 2 -  Recursión y ordenamiento
 ### Primera parte
 `Ejercicio 1`
 
@@ -60,6 +60,7 @@ Implemente un algoritmo recursivo que convierta un número en notación decimal 
 `Ejercicio 4`
 
 Implemente un algoritmo recursivo que presente los primeros N términos de la secuencia de Fibonacci. 
+
 Por ej. los 6 primeros términos son: 0 1 1 2 3 5
 
 `Ejercicio 5`
