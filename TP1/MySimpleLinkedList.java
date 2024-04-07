@@ -76,6 +76,8 @@ public class MySimpleLinkedList<T extends Comparable <T>> implements Iterable<T>
     elemento, o -1 si el elemento no existe en la lista.
     */
 
+    //Dado un elemento retornará el indice donde se encuenta ese elemento dentro de la lista. En caso de no hallarse, retorna -1
+    //Complejidad computacional: O(n) --- En el peor de los casos deberá recorrer toda la lista. (n es el tamaño de la lista)
     public int indexOf(T n){
         if(!this.isEmpty()){
             int i = 0;
