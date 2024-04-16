@@ -28,7 +28,18 @@ public class Recursion {
             return false;
     }
 
-    
+    //Ejercicio 2
+    //Implemente un algoritmo recursivo para buscar un elemento en un arreglo ordenado ascendentemente
+    public static int existe (int[] arr, int elemento, int pos) {
+        //Si encontre el elemento en la posicion actual, la retorno
+        if (arr[pos]==elemento)
+            return pos;
+        //Si el elemento en la posicion actual es menor al elemento buscado y todavia no llegue al final del arreglo
+        else if (arr[pos]<elemento && pos <= arr.length-1)
+            return existe(arr, elemento,pos+1);
+        return -1;
+    }
 
+    //
 
 }
