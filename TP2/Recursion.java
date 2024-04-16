@@ -51,4 +51,22 @@ public class Recursion {
         else
             return equivalenciaBinaria(valor/2)+ valor%2;
     }
+
+    //Ejercicio 4
+    //Implemente un algoritmo recursivo que presente los primeros N términos de la secuencia de Fibonacci.
+
+    //Ejercicio 5
+    //Dado un arreglo ordenado de números distintos A se desea construir un algoritmo que
+    //determine si alguno de los elementos de dicho arreglo contiene un valor igual a la posición en la
+    //cuál se encuentra, es decir, A[i] = i.
+
+    //Ejercicio 6
+    //Implemente un algoritmo de ordenamiento por selección en un arreglo.
+    //Implemente un algoritmo de ordenamiento por burbujeo en un arreglo.
+
+    //Ejercicio 7
+    //Implemente un algoritmo de ordenamiento mergesort para un arreglo de tamaño N.
+    //Implemente un algoritmo de ordenamiento quicksort para un arreglo de tamaño N.
+    
+
 }
