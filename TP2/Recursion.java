@@ -40,6 +40,15 @@ public class Recursion {
         return -1;
     }
 
-    //
+    //Ejercicio 3
+    //Implemente un algoritmo recursivo que convierta un número en notación decimal a su equivalente en notación binaria
 
+    public static String equivalenciaBinaria (int valor){
+        if (valor==1)
+            return "1";
+        else if (valor==0)
+            return "0";
+        else
+            return equivalenciaBinaria(valor/2)+ valor%2;
+    }
 }

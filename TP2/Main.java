@@ -18,5 +18,8 @@ public class Main {
         //Ejercicio 2
         int [] arr3 = {4,5,7,9};
         System.out.println("Existe el elemento 5: " + existe(arr3, 5, 0));
+
+        //Ejercicio 3
+        System.out.println("Binario de 255: " + equivalenciaBinaria(255));
     }
 }
