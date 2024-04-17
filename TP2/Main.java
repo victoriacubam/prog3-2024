@@ -25,6 +25,15 @@ public class Main {
 
         //Ejercicio 5
         int [] arr4 = {-1,-2,2,3,4,5,7,9};
-        System.out.println(posValorIgual(arr4, 0));
+        System.out.println(posicionValorIgual(arr4, 0));
+
+        //Ejercicio 6
+       /* int [] arrDesordenado = {8,5,7,1,2,9,10};
+        int[] arrOrdenado = ordenamientoBurbujeo(arrDesordenado, 0);
+        for(int i = 0; i<arrOrdenado.length-1; i++){
+            System.out.println(arrOrdenado[i]);
+        }*/
+
+
     }
 }

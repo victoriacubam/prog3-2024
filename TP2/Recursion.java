@@ -54,24 +54,25 @@ public class Recursion {
 
     //Ejercicio 4
     //Implemente un algoritmo recursivo que presente los primeros N términos de la secuencia de Fibonacci.
-    public static int secuenciaFibo (int n, int a){
-        if(){
+    // 0 1 1 2 3 5 8 13 21
+   /* public static int secuenciaFibo (int n, int a, int b){ // 0 1   1 2  3 5
+        if() {
+            return;
+        } else {
 
-        } else if (){
-            
         }
-    }
+    }*/
 
     //Ejercicio 5
     //Dado un arreglo ordenado de números distintos A se desea construir un algoritmo que
     //determine si alguno de los elementos de dicho arreglo contiene un valor igual a la posición en la
     //cuál se encuentra, es decir, A[i] = i.
 
-    public static int posValorIgual (int [] arr, int pos){
-        if (arr[pos]==pos){ //[1,(2),3,4],
+    public static int posicionValorIgual (int [] arr, int pos){
+        if (arr[pos]==pos){ //[-1,-2,(2),3,4],
             return pos;
         } else if (arr[pos]<pos && arr.length>pos+1){
-            return posValorIgual(arr, pos+1);
+            return posicionValorIgual(arr, pos+1);
         } else {
             return -1;
         }
@@ -80,6 +81,21 @@ public class Recursion {
     //Ejercicio 6
     //Implemente un algoritmo de ordenamiento por selección en un arreglo.
     //Implemente un algoritmo de ordenamiento por burbujeo en un arreglo.
+
+    public static int [] ordenamientoBurbujeo (int [] arr, int pos){
+        // 8 4 7 5 1 9
+        for (int i=0 ; i<arr.length-1; i++){
+            for (int j=0 ; j<arr.length-1; j++){
+
+            }
+            if (arr[pos]>arr[pos+1]){
+                int aux = arr[pos+1];
+                arr[pos+1] = arr[pos];
+                arr[pos] = aux;
+            }
+        }
+       return arr;
+    }
 
     //Ejercicio 7
     //Implemente un algoritmo de ordenamiento mergesort para un arreglo de tamaño N.
