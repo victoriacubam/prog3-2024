@@ -1,4 +1,5 @@
 package TP2;
+import java.sql.SQLOutput;
 import java.util.Arrays;
 
 import static TP2.Recursion.*;
@@ -21,5 +22,9 @@ public class Main {
 
         //Ejercicio 3
         System.out.println("Binario de 255: " + equivalenciaBinaria(255));
+
+        //Ejercicio 5
+        int [] arr4 = {-1,-2,2,3,4,5,7,9};
+        System.out.println(posValorIgual(arr4, 0));
     }
 }

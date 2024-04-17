@@ -54,11 +54,28 @@ public class Recursion {
 
     //Ejercicio 4
     //Implemente un algoritmo recursivo que presente los primeros N términos de la secuencia de Fibonacci.
+    public static int secuenciaFibo (int n, int a){
+        if(){
+
+        } else if (){
+            
+        }
+    }
 
     //Ejercicio 5
     //Dado un arreglo ordenado de números distintos A se desea construir un algoritmo que
     //determine si alguno de los elementos de dicho arreglo contiene un valor igual a la posición en la
     //cuál se encuentra, es decir, A[i] = i.
+
+    public static int posValorIgual (int [] arr, int pos){
+        if (arr[pos]==pos){ //[1,(2),3,4],
+            return pos;
+        } else if (arr[pos]<pos && arr.length>pos+1){
+            return posValorIgual(arr, pos+1);
+        } else {
+            return -1;
+        }
+    }
 
     //Ejercicio 6
     //Implemente un algoritmo de ordenamiento por selección en un arreglo.
