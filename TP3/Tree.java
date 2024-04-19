@@ -96,7 +96,18 @@ public class Tree {
     //Recursivamente obtener los datos del subárbol izquierdo
     //Recursivamente obtener los datos del subárbol derecho
     //Imprimir el dato de la raíz
-    // void printPosOrder(),
+    public void printPosOrder(){
+        if (this.isEmpty()){
+        System.out.println("Pos Order: Esta vacío");
+        } else {
+            if(this.root.getLeft()!=null){
+            }
+            if(this.root.getRight()!=null){
+            }
+        
+        System.out.println("Pos Order");
+        }
+    }
 
     //Imprimir el dato de la raíz
     //Recursivamente obtener los datos del subárbol izquierdo
