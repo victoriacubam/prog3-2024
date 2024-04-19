@@ -62,8 +62,11 @@ public class Tree {
     private int getHeight(Node n){
         int heightLeft = 0;
         int heightRight = 0;
+
+        if (this.isEmpty())
+            return 0;
         //Si no esta vacio lo recorro
-        if (!this.isEmpty()){
+        else {
             if (n.getLeft()!=null)
                 heightLeft = getHeight(n.getLeft());
             if (n.getRight()!=null)
