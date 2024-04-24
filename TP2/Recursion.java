@@ -82,17 +82,17 @@ public class Recursion {
     //Implemente un algoritmo de ordenamiento por selección en un arreglo.
     //Implemente un algoritmo de ordenamiento por burbujeo en un arreglo.
 
-    public static int [] ordenamientoBurbujeo (int [] arr, int pos){
+    public static int [] ordenamientoBurbujeo (int [] arr){
         // 8 4 7 5 1 9
         for (int i=0 ; i<arr.length-1; i++){
             for (int j=0 ; j<arr.length-1; j++){
+                if (arr[i]>arr[i+1]){
+                    int aux = arr[i];
+                    arr[i] = arr[i+j];
+                    arr[i +j] = aux;
+                }
+            }
 
-            }
-            if (arr[pos]>arr[pos+1]){
-                int aux = arr[pos+1];
-                arr[pos+1] = arr[pos];
-                arr[pos] = aux;
-            }
         }
        return arr;
     }

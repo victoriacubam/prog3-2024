@@ -10,6 +10,6 @@ public class Main {
         a1.insert(10);
 
         System.out.println(a1.getHeight());
-        
+
     }
 }
