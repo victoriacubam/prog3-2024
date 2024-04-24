@@ -30,4 +30,8 @@ public class Node {
         return this.right;
     }
 
+    public String toString() {
+        return this.key.toString();
+    }
+
 }
