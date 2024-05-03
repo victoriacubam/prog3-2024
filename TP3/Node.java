@@ -14,6 +14,10 @@ public class Node {
         return this.key;
     }
 
+    public void setKey(Integer key){
+        this.key = key;
+    }
+
     public void setLeft(Integer left){
         this.left = new Node(left);
     }
@@ -28,6 +32,12 @@ public class Node {
 
     public Node getRight(){
         return this.right;
+    }
+
+    public String toString(){
+        if (this.key!=null)
+            return this.key.toString();
+        return "-";
     }
 
 }
