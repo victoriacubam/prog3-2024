@@ -29,4 +29,8 @@ public class Arco<T> {
 		return etiqueta;
 	}
 
+	public String toString(){
+		return "(" + this.verticeOrigen + "-" + this.getVerticeDestino() + ")";
+	}
+
 }
